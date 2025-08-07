@@ -1,7 +1,6 @@
 [build]
-  builder = "NIXPACKS"
-  buildCommand = "mvn clean install"
-  startCommand = "java -jar target/*.jar"
+builder = "NIXPACKS"
+buildCommand = "mvn clean install -DskipTests"
 
 [variables]
-  JAVA_VERSION = "21"
+JAVA_VERSION = "21"
