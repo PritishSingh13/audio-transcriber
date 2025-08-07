@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Whisper API</title>
+</head>
+<body>
+    <h2>Upload Audio File for Transcription</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept="audio/*" required>
+        <button type="submit">Upload and Transcribe</button>
+    </form>
+    <pre id="responseText"></pre>
+
+    <script>
+        document.getElementById("uploadForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const formData = new FormData();
+            formData.append("file", document.getElementById("fileInput").files[0]);
+
+            const response = await fetch("/api/transcribe", {
+                method: "POST",
+                body: formData
+            });
+
+            const text = await response.text();
+            document.getElementById("responseText").textContent = text;
+        });
+    </script>
+</body>
+</html>
