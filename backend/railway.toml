@@ -1,5 +1,7 @@
 [build]
-nixpacksPlan = true
+  builder = "NIXPACKS"
+  buildCommand = "mvn clean install"
+  startCommand = "java -jar target/*.jar"
 
 [variables]
-JAVA_VERSION = "21"
+  JAVA_VERSION = "21"
