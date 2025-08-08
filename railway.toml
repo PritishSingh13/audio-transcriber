@@ -1,0 +1,8 @@
+[build]
+builder = "nixpacks"
+buildCommand = "cd backend && mvn clean install -DskipTests"
+startCommand = "java -jar backend/target/audio-transcribe-0.0.1-SNAPSHOT.jar"
+
+
+[variables]
+JAVA_VERSION = "21"
