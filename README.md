@@ -1,4 +1,4 @@
-# 🎧 Audio Transcribe App — Full Stack Project (Spring Boot + React + MongoDB + OpenAI Whisper API)
+#  Audio Transcribe App — Full Stack Project (Spring Boot + React + MongoDB + OpenAI Whisper API)
 
 
 Hi! This is a personal full-stack project I built as a **Java + Spring Boot developer**.
